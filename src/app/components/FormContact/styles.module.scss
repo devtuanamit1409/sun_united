@@ -1,0 +1,123 @@
+.formContact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  h3 {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(39, 39, 39, 1);
+    margin-bottom: 22px;
+  }
+
+  form {
+    width: 100%;
+    margin-bottom: 10px;
+    div {
+      margin-top: 24px;
+    }
+
+    label {
+      display: grid;
+      gap: 4px;
+      margin-bottom: 20px;
+      grid-template-columns: 1fr;
+      align-items: center;
+      width: 100%;
+
+      span {
+        font-weight: 700;
+      }
+
+      span + * {
+        margin-top: 10px;
+      }
+    }
+
+    input,
+    textarea {
+      font-size: 16px;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      width: 100%;
+      border: 1px solid #000000;
+      border-radius: 8px;
+      background-color: inherit;
+      outline: 0;
+      padding: 12px 18px;
+      resize: none;
+    }
+
+    .formError {
+      color: red;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 18px;
+    }
+
+    textarea {
+      grid-column: span 2;
+    }
+
+    select {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      width: 100%;
+      padding: 20px 26px;
+      border-radius: 4px;
+      font-size: 20px;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 374.8px) {
+    h3 {
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 0 20px;
+
+    h3 {
+      font-size: 52px;
+    }
+
+    p {
+      font-size: 24px;
+    }
+
+    form {
+      label {
+        grid-template-columns: 1fr 320px;
+      }
+      input + .formError {
+        grid-column: 2;
+      }
+    }
+  }
+}
+
+.modalSuccess {
+  text-align: center;
+  p {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 0.4rem 1.2rem;
+  }
+}

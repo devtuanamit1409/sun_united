@@ -1,0 +1,57 @@
+.btn {
+  border-radius: 9999px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  color: #242424;
+  padding: 1rem 2rem;
+  cursor: pointer;
+
+  &.default {
+    border: 0;
+    background-color: #ffffff;
+    color: #242424;
+  }
+
+  &.primary {
+    border: 0;
+    background: var(--primary-gradient);
+  }
+
+  &.secondary {
+    border: 0;
+    background: var(--primary-gradient);
+
+    position: relative;
+    background-clip: text;
+    color: transparent;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 2px solid transparent;
+      border-radius: 9999px;
+      background: inherit;
+      background-origin: border-box;
+      background-clip: border-box;
+      mask:
+        linear-gradient(#ffffff 0 0) padding-box,
+        linear-gradient(#ffffff 0 0);
+      mask-composite: exclude;
+      mask-repeat: no-repeat;
+    }
+
+    &:hover {
+      background-clip: unset;
+      color: #000000;
+
+      &::before {
+        content: unset;
+      }
+    }
+  }
+}

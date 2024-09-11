@@ -1,0 +1,52 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.select {
+  position: relative;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 10px 10px 10px 26px;
+  background-color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    bottom: auto;
+    left: 0px;
+    right: 0px;
+    z-index: 6;
+    margin-top: 8px;
+    border: 1px solid #c1c1c1;
+    height: 400px;
+    overflow: auto;
+
+    .option {
+      padding: 20px 26px;
+      background-color: #ffffff;
+      font-weight: 700;
+      & + .option {
+        border-top: 1px solid #c1c1c1;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .options {
+      top: auto;
+      bottom: 100%;
+      margin-bottom: 8px;
+    }
+  }
+}

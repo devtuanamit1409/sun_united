@@ -1,0 +1,212 @@
+.footer {
+  background-color: #242424;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  margin-top: 240px;
+
+  .container {
+    position: relative;
+    margin: -240px auto 0;
+    width: 100%;
+    max-width: 1174px;
+    min-height: 240px;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .left {
+    flex: 1 0 30%;
+    order: 2;
+
+    .follow {
+      color: #ffffff;
+      height: 240px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: 30px;
+      gap: 36px;
+
+      .socials {
+        > * + * {
+          margin-left: 36px;
+        }
+      }
+    }
+
+    .information {
+      color: #ffffff;
+      padding: 120px 0;
+    }
+
+    .contact {
+      margin: 24px 0;
+
+      > a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      img {
+        margin: 4px;
+        padding: 1px;
+      }
+
+      span {
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 300;
+        white-space: pre-line;
+      }
+    }
+
+    .copyright {
+      margin-top: 24px;
+      color: rgba(145, 145, 145, 0.7);
+
+      > p {
+        white-space: pre-wrap;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .card {
+    flex-basis: 100%;
+    order: 1;
+    background: var(--primary-gradient);
+    padding: 58px 20px;
+
+    > h3 {
+      text-align: center;
+    }
+
+    > p {
+      line-height: 30px;
+    }
+
+    form {
+      > div {
+        margin-top: 24px;
+      }
+
+      label,
+      .selectInput {
+        span {
+          font-weight: 700;
+        }
+
+        span + * {
+          margin-top: 10px;
+        }
+      }
+
+      .select {
+        position: relative;
+        border: 1px solid black;
+        border-radius: 4px;
+        padding: 10px 10px 10px 26px;
+        background-color: #ffffff;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .options {
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+          position: absolute;
+          bottom: calc(100%);
+          margin-bottom: 8px;
+          left: 0px;
+          right: 0px;
+          border: 1px solid #c1c1c1;
+
+          .option {
+            padding: 20px 26px;
+            background-color: #ffffff;
+            font-weight: 700;
+            & + .option {
+              border-top: 1px solid #c1c1c1;
+            }
+          }
+        }
+      }
+
+      input,
+      textarea {
+        font-size: 16px;
+        font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #272727;
+        background-color: inherit;
+        outline: 0;
+        padding: 2px;
+        resize: none;
+      }
+
+      select {
+        font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+        width: 100%;
+        padding: 16px 20px;
+        border-radius: 4px;
+        font-size: 16px;
+        border: none;
+        background-color: white;
+      }
+
+      .formError {
+        color: red;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+      }
+    }
+
+    button {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      flex-wrap: nowrap;
+    }
+
+    .left {
+      order: 1;
+
+      .follow {
+        color: #242424;
+      }
+    }
+
+    .card {
+      flex-basis: 60%;
+      order: 2;
+      padding: 58px 115px;
+    }
+  }
+}
+
+.modalSuccess {
+  margin: 0 16px;
+  text-align: center;
+  p {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 0.4rem 1.2rem;
+  }
+}

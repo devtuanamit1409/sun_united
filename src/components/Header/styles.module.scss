@@ -1,0 +1,117 @@
+.header {
+  background-color: transparent;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-content: space-between;
+  padding: 30px;
+  gap: 20px;
+
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 1;
+
+  &.scrolled {
+    position: fixed;
+    background-color: black;
+    padding: 20px 30px;
+    animation: showHeader 0.4s ease 0s 1 normal;
+
+    .logoContainer img {
+      width: 88px;
+      height: 56px;
+    }
+  }
+
+  .navigation {
+    display: none;
+    align-items: center;
+    justify-items: center;
+    padding: 40px;
+
+    background-color: #000000;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    gap: 40px;
+
+    transition: left 0.4s;
+
+    a {
+      font-size: 19px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    &.open {
+      display: flex;
+      left: 0;
+    }
+
+    .closeButton {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      cursor: pointer;
+    }
+  }
+
+  .hamburgerMenu {
+    margin-left: auto;
+    cursor: pointer;
+    height: 100%;
+    font-size: 19px;
+    background: none;
+    border: none;
+    color: #ffffff;
+  }
+
+  @media (min-width: 1024px) {
+    .navigation {
+      display: flex;
+      background-color: transparent;
+      flex-direction: row;
+      margin-left: auto;
+      gap: 20px;
+      padding: 0;
+
+      position: static;
+      top: unset;
+      left: unset;
+      width: auto;
+
+      button {
+        padding: 13px 30px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .closeButton {
+        display: none;
+      }
+    }
+
+    .hamburgerMenu {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .navigation {
+      padding-right: 90px;
+    }
+  }
+}
+
+@keyframes showHeader {
+  from {
+    top: -60px;
+  }
+  to {
+    top: 0px;
+  }
+}

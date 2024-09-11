@@ -1,0 +1,10 @@
+.section {
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+
+  > div {
+    width: 100%;
+    max-width: 1174px;
+  }
+}
